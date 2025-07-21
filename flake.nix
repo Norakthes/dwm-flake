@@ -14,8 +14,8 @@
     packages.${system}.default = pkgs.dwm.overrideAttrs (oldAttrs: {
       patches = [];
 
-      postpatch = ''
-        cp ${./config.h} config.h
+      postPatch = ''
+      cp ${./config.h} config.h
       '';
     });
   };
