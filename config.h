@@ -114,6 +114,10 @@ static const Key keys[] = {
 	{ 0,                             XF86XK_AudioRaiseVolume,	spawn, {.v = (char *[]) {changevol, "+5%", NULL} }                },
 	{ ShiftMask,                     XF86XK_AudioRaiseVolume,	spawn, {.v = (char *[]) {changevol, "+1%", NULL} }                },
 
+	// My vol down button is half broken, so alt+volup lowers the volume
+	{ MODKEY,                       XF86XK_AudioRaiseVolume,	spawn, {.v = (char *[]) {changevol, "-5%", NULL} }                },
+	{ MODKEY|ShiftMask,             XF86XK_AudioRaiseVolume,	spawn, {.v = (char *[]) {changevol, "-1%", NULL} }                },
+
 	{ 0,                             XF86XK_AudioLowerVolume,	spawn, {.v = (char *[]) {changevol, "-5%", NULL} }                },
 	{ ShiftMask,                     XF86XK_AudioLowerVolume,	spawn, {.v = (char *[]) {changevol, "-1%", NULL} }                },
 
@@ -139,6 +143,8 @@ static const Key keys[] = {
    // Brightness Up
    {0, XF86XK_MonBrightnessUp, spawn, {.v = (char *[]) {changebrightness, "s", "5%+", NULL}}},
    {ShiftMask, XF86XK_MonBrightnessUp, spawn, {.v = (char *[]) {changebrightness, "s", "1+", NULL}}},
+
+
 
    // Brightness Down
    {0, XF86XK_MonBrightnessDown, spawn, {.v = (char *[]) {changebrightness, "s", "5%-", NULL}}},
