@@ -70,7 +70,7 @@ static const char *playpausemedia[]     = { "/usr/bin/playerctl", "play-pause",	
 // static const char *flameshot[] = {"/usr/bin/flameshot", "gui", NULL};
 
 static char changevol[] = "changevol";
-static char changebrightness[] = "/home/rasmus/.local/bin/dwm_scripts/brightness.sh";
+static char changebrightness[] = "changebrightness";
 
 
 static const Key keys[] = {
